@@ -4,22 +4,23 @@
     box-sizing: border-box;
 }
 .small, .medium, .large{
-    display: none;
+    display: block;
 }
 
 @media only screen and (max-width: 300px) {
     body {
         background-color: red;
+        display: flex;
+        flex-direction: column;
     }
     .small{
         display: block;
-        font-size: 0.8em;
     }
-    .small > h1 {
+    h1 {
         text-align: center;
         margin-bottom: 10px;
     }
-    .small > p {
+    p {
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -29,14 +30,21 @@
     body{
         background-color: green;
     }
+    .small{
+        width: 66.6%;
+    }    
     .medium{
         display: block;
+        width: 33.3%;
     }
-    .medium > h1 {
+    .large{
+        width: 100%;
+    }
+    h1 {
         text-align: center;
         margin-bottom: 10px;
     }
-    .medium > p {
+    p {
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -44,15 +52,18 @@
 @media only screen and (min-width: 768px){
     body{
         background-color: blue;
+        display: flex;
+        flex-direction: row
+        ;
     }
     .large{
         display: block;
     }
-    .large > h1 {
+    h1 {
         text-align: center;
         margin-bottom: 10px;
     }
-    .large > p {
+    p {
         margin-left: 10px;
         margin-right: 10px;
     }
