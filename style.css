@@ -53,8 +53,7 @@
     body{
         background-color: blue;
         display: flex;
-        flex-direction: row
-        ;
+        flex-direction: row;
     }
     .large{
         display: block;
